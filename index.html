@@ -1,154 +1,153 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Вивчення Git</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f2f2f2;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: #24292f;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    main {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      text-align: center;
-      color: #24292f;
-    }
-    ul {
-      list-style-type: square;
-      padding-left: 20px;
-    }
-    code {
-      background: #eee;
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-    .certificate {
-      text-align: center;
-      margin: 20px 0;
-    }
-    img {
-      max-width: 80%;
-      border: 2px solid #ccc;
-      border-radius: 10px;
-    }
-    footer {
-      text-align: center;
-      padding: 10px;
-      background: #24292f;
-      color: white;
-      margin-top: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основи GNU/Linux</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f7f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 30px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        pre {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        code {
+            font-family: "Courier New", Courier, monospace;
+            background-color: #e8e8e8;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        .bash-script pre {
+            background-color: #1a1a1a;
+            color: #b3e5fc;
+            border: 1px solid #000;
+        }
+
+        .bash-script .comment {
+            color: #88b0b5;
+        }
+
+        .bash-script .string {
+            color: #a5d6a7;
+        }
+
+        .bash-script .keyword {
+            color: #ffcc80;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Вивчення Git</h1>
-  </header>
 
-  <main>
-    <section>
-      <h2>Що таке система контролю версій?</h2>
-      <p>
-        Система контролю версій (Version Control System, VCS) — це інструмент, який дозволяє зберігати історію змін у проєктах, працювати командно та легко повертатися до попередніх версій коду.
-      </p>
-      <p>
-        <b>Git</b> — найпопулярніша система контролю версій, розроблена Лінусом Торвальдсом у 2005 році. Вона є розподіленою, тобто кожен учасник має повну копію репозиторію.
-      </p>
-    </section>
+<div class="container">
+    <h1>🌍 Основи операційної системи GNU/Linux</h1>
 
-    <section>
-      <h2>Переваги Git</h2>
-      <ul>
-        <li>Збереження історії змін у проєкті</li>
-        <li>Можливість командної роботи над одним кодом</li>
-        <li>Швидке перемикання між версіями</li>
-        <li>Робота без постійного підключення до інтернету</li>
-        <li>Велика спільнота та підтримка</li>
-      </ul>
-    </section>
+    <p>
+        <strong>GNU/Linux</strong> — це сімейство вільних та відкритих операційних систем, які базуються на ядрі Linux. Ця ОС відома своєю стабільністю, безпекою та гнучкістю. Вона є основою для мільйонів серверів, смартфонів (Android), суперкомп'ютерів та настільних комп'ютерів.
+    </p>
 
-    <section>
-      <h2>Життєвий цикл файлів Git</h2>
-      <p>
-        Кожен файл у вашому проєкті проходить через три основні стани:
-      </p>
-      <ul>
-        <li><strong>Working Directory (Робоча директорія)</strong>: це файли, які ви змінюєте.</li>
-        <li><strong>Staging Area (Область підготовки)</strong>: це проміжний етап, де ви збираєте файли для наступного коміту. Ви додаєте сюди файли командою <code>git add</code>.</li>
-        <li><strong>Git Repository (Репозиторій Git)</strong>: це місце, де зберігається вся історія вашого проєкту. Файли потрапляють сюди після виконання команди <code>git commit</code>.</li>
-      </ul>
-      <p>
-        Цей цикл дозволяє вам чітко контролювати, які зміни будуть збережені в історії проєкту.
-      </p>
-    </section>
+    <h2>🐧 Найпопулярніші дистрибутиви</h2>
+    <p>
+        Дистрибутив — це повна операційна система, що включає ядро Linux, системні інструменти, бібліотеки та додаткове програмне забезпечення. Найвідоміші з них:
+    </p>
+    <ul>
+        <li><strong>Ubuntu</strong>: один з найпопулярніших дистрибутивів, ідеальний для початківців.</li>
+        <li><strong>Debian</strong>: стабільний і надійний дистрибутив, на якому базується Ubuntu.</li>
+        <li><strong>Fedora</strong>: орієнтований на нові технології, спонсорується компанією Red Hat.</li>
+        <li><strong>Arch Linux</strong>: для досвідчених користувачів, які хочуть повний контроль над системою.</li>
+        <li><strong>Linux Mint</strong>: дружній до користувачів, з елегантним інтерфейсом.</li>
+    </ul>
 
-    <section>
-      <h2>Робота з віддаленими репозиторіями</h2>
-      <p>
-        Git дозволяє синхронізувати ваш локальний репозиторій з віддаленим (наприклад, на GitHub).
-      </p>
-      <ol>
-        <li><strong><code>git remote add origin URL</code></strong>: Додає посилання на віддалений репозиторій. <code>origin</code> — це стандартна назва для віддаленого репозиторію.</li>
-        <li><strong><code>git push -u origin main</code></strong>: Відправляє ваші локальні коміти на віддалений сервер. Опція <code>-u origin main</code> пов'язує вашу локальну гілку з віддаленою.</li>
-        <li><strong><code>git pull origin main</code></strong>: Завантажує останні зміни з віддаленого репозиторію до вашого локального.</li>
-      </ol>
-    </section>
+    <h2>🖥️ Приклади команд у Linux CLI</h2>
+    <p>
+        Командний рядок (CLI) — потужний інструмент для керування системою. Ось кілька основних команд:
+    </p>
+    <ul>
+        <li><code>pwd</code>: Показує <strong>повний шлях</strong> до поточної робочої директорії.</li>
+        <li><code>echo</code>: Виводить текст або значення змінних на екран.</li>
+        <li><code>ls</code>: <strong>Перелік</strong> вмісту поточної директорії.</li>
+        <li><code>cd</code>: <strong>Зміна директорії</strong> (наприклад, <code>cd Documents</code>).</li>
+        <li><code>touch</code>: <strong>Створення нового</strong>, порожнього файлу.</li>
+        <li><code>mkdir</code>: <strong>Створення</strong> нової директорії.</li>
+        <li><code>cp</code>: <strong>Копіювання</strong> файлів або директорій.</li>
+        <li><code>mv</code>: <strong>Переміщення</strong> або перейменування файлів.</li>
+        <li><code>rm</code>: <strong>Видалення</strong> файлів або директорій.</li>
+        <li><code>history</code>: Показує <strong>історію</strong> виконаних команд.</li>
+    </ul>
 
-    <section>
-      <h2>10 базових команд Git</h2>
-      <ol>
-        <li><code>git init</code> – створити новий репозиторій</li>
-        <li><code>git clone URL</code> – клонувати репозиторій з GitHub</li>
-        <li><code>git status</code> – перевірити стан файлів</li>
-        <li><code>git add filename</code> – додати файл у staging</li>
-        <li><code>git commit -m "повідомлення"</code> – зафіксувати зміни</li>
-        <li><code>git log</code> – переглянути історію комітів</li>
-        <li><code>git branch</code> – показати гілки</li>
-        <li><code>git checkout branch_name</code> – переключитися на іншу гілку</li>
-        <li><code>git merge branch_name</code> – об’єднати гілки</li>
-        <li><code>git push</code> – відправити зміни на GitHub</li>
-      </ol>
-    </section>
+    <h2>🔐 BASH-скрипт авторизації</h2>
+    <p>
+        BASH-скрипти дозволяють автоматизувати завдання в системі. Ось приклад простого скрипту, що імітує авторизацію:
+    </p>
+    <div class="bash-script">
+<pre><code><span class="comment"># Імітація авторизації в системі</span>
+<span class="keyword">echo</span> <span class="string">"Введіть логін..."</span>
+<span class="keyword">read</span> login
+<span class="keyword">echo</span> <span class="string">"Введіть пароль..."</span>
+<span class="keyword">read</span> password
 
-    <section>
-      <h2>Сертифікат</h2>
-      <div class="certificate">
-        <p>Приклад сертифіката з онлайн-курсу по Git:</p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/512px-Git_icon.svg.png" alt="Сертифікат Git">
-      </div>
-    </section>
+<span class="keyword">if</span> [[ <span class="string">"$password"</span> == <span class="string">"rsm322"</span> ]] && [[ <span class="string">"$login"</span> == <span class="string">"romchik"</span> ]]; <span class="keyword">then</span>
+    <span class="keyword">echo</span> <span class="string">"Correct! Welcome to the system"</span>
+<span class="keyword">else</span>
+    <span class="keyword">echo</span> <span class="string">"Retry later!"</span>
+<span class="keyword">fi</span></code></pre>
+    </div>
 
-    <section>
-      <h2>Джерела інформації</h2>
-      <ul>
-        <li><a href="https://git-scm.com/doc" target="_blank">Офіційна документація Git</a></li>
-        <li><a href="https://guides.github.com/" target="_blank">Посібники від GitHub</a></li>
-        <li><a href="https://www.atlassian.com/git/tutorials" target="_blank">Git туторіали Atlassian</a></li>
-      </ul>
-    </section>
-  </main>
+    <h2>📚 Джерела інформації</h2>
+    <p>
+        Для подальшого вивчення Linux та BASH-скриптингу рекомендую:
+    </p>
+    <ul>
+        <li><a href="https://tldp.org/" target="_blank">The Linux Documentation Project</a> — велика колекція документації.</li>
+        <li><a href="https://www.linuxtrainingacademy.com/linux-commands-cheat-sheet/" target="_blank">Linux Commands Cheat Sheet</a> — зручна шпаргалка по командах.</li>
+        <li><a href="https://linuxjourney.com/" target="_blank">Linux Journey</a> — інтерактивний курс для початківців.</li>
+        <li><a href="https://devhints.io/bash" target="_blank">Bash cheatsheet</a> — корисна шпаргалка для BASH.</li>
+    </ul>
 
-  <footer>
-    <p>© 2025 Навчальний проєкт: Git</p>
-  </footer>
+</div>
+
 </body>
 </html>
