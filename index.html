@@ -1,127 +1,154 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Вивчення Git</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f2f2f2;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: #24292f;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    main {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      text-align: center;
-      color: #24292f;
-    }
-    ul {
-      list-style-type: square;
-      padding-left: 20px;
-    }
-    code {
-      background: #eee;
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-    .certificate {
-      text-align: center;
-      margin: 20px 0;
-    }
-    img {
-      max-width: 80%;
-      border: 2px solid #ccc;
-      border-radius: 10px;
-    }
-    footer {
-      text-align: center;
-      padding: 10px;
-      background: #24292f;
-      color: white;
-      margin-top: 20px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вивчення Git</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #24292f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      text-align: center;
+      color: #24292f;
+    }
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+    code {
+      background: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .certificate {
+      text-align: center;
+      margin: 20px 0;
+    }
+    img {
+      max-width: 80%;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #24292f;
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Вивчення Git</h1>
-  </header>
+  <header>
+    <h1>Вивчення Git</h1>
+  </header>
 
-  <main>
-    <section>
-      <h2>Що таке система контролю версій?</h2>
-      <p>
-        Система контролю версій (Version Control System, VCS) — це інструмент, який дозволяє зберігати історію змін у проєктах, працювати командно та легко повертатися до попередніх версій коду.
-      </p>
-      <p>
-        <b>Git</b> — найпопулярніша система контролю версій, розроблена Лінусом Торвальдсом у 2005 році. Вона є розподіленою, тобто кожен учасник має повну копію репозиторію.
-      </p>
-    </section>
+  <main>
+    <section>
+      <h2>Що таке система контролю версій?</h2>
+      <p>
+        Система контролю версій (Version Control System, VCS) — це інструмент, який дозволяє зберігати історію змін у проєктах, працювати командно та легко повертатися до попередніх версій коду.
+      </p>
+      <p>
+        <b>Git</b> — найпопулярніша система контролю версій, розроблена Лінусом Торвальдсом у 2005 році. Вона є розподіленою, тобто кожен учасник має повну копію репозиторію.
+      </p>
+    </section>
 
-    <section>
-      <h2>Переваги Git</h2>
-      <ul>
-        <li>Збереження історії змін у проєкті</li>
-        <li>Можливість командної роботи над одним кодом</li>
-        <li>Швидке перемикання між версіями</li>
-        <li>Робота без постійного підключення до інтернету</li>
-        <li>Велика спільнота та підтримка</li>
-      </ul>
-    </section>
+    <section>
+      <h2>Переваги Git</h2>
+      <ul>
+        <li>Збереження історії змін у проєкті</li>
+        <li>Можливість командної роботи над одним кодом</li>
+        <li>Швидке перемикання між версіями</li>
+        <li>Робота без постійного підключення до інтернету</li>
+        <li>Велика спільнота та підтримка</li>
+      </ul>
+    </section>
 
-    <section>
-      <h2>10 базових команд Git</h2>
-      <ol>
-        <li><code>git init</code> – створити новий репозиторій</li>
-        <li><code>git clone URL</code> – клонувати репозиторій з GitHub</li>
-        <li><code>git status</code> – перевірити стан файлів</li>
-        <li><code>git add filename</code> – додати файл у staging</li>
-        <li><code>git commit -m "повідомлення"</code> – зафіксувати зміни</li>
-        <li><code>git log</code> – переглянути історію комітів</li>
-        <li><code>git branch</code> – показати гілки</li>
-        <li><code>git checkout branch_name</code> – переключитися на іншу гілку</li>
-        <li><code>git merge branch_name</code> – об’єднати гілки</li>
-        <li><code>git push</code> – відправити зміни на GitHub</li>
-      </ol>
-    </section>
+    <section>
+      <h2>Життєвий цикл файлів Git</h2>
+      <p>
+        Кожен файл у вашому проєкті проходить через три основні стани:
+      </p>
+      <ul>
+        <li><strong>Working Directory (Робоча директорія)</strong>: це файли, які ви змінюєте.</li>
+        <li><strong>Staging Area (Область підготовки)</strong>: це проміжний етап, де ви збираєте файли для наступного коміту. Ви додаєте сюди файли командою <code>git add</code>.</li>
+        <li><strong>Git Repository (Репозиторій Git)</strong>: це місце, де зберігається вся історія вашого проєкту. Файли потрапляють сюди після виконання команди <code>git commit</code>.</li>
+      </ul>
+      <p>
+        Цей цикл дозволяє вам чітко контролювати, які зміни будуть збережені в історії проєкту.
+      </p>
+    </section>
 
-    <section>
-      <h2>Сертифікат</h2>
-      <div class="certificate">
-        <p>Приклад сертифіката з онлайн-курсу по Git:</p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/512px-Git_icon.svg.png" alt="Сертифікат Git">
-      </div>
-    </section>
+    <section>
+      <h2>Робота з віддаленими репозиторіями</h2>
+      <p>
+        Git дозволяє синхронізувати ваш локальний репозиторій з віддаленим (наприклад, на GitHub).
+      </p>
+      <ol>
+        <li><strong><code>git remote add origin URL</code></strong>: Додає посилання на віддалений репозиторій. <code>origin</code> — це стандартна назва для віддаленого репозиторію.</li>
+        <li><strong><code>git push -u origin main</code></strong>: Відправляє ваші локальні коміти на віддалений сервер. Опція <code>-u origin main</code> пов'язує вашу локальну гілку з віддаленою.</li>
+        <li><strong><code>git pull origin main</code></strong>: Завантажує останні зміни з віддаленого репозиторію до вашого локального.</li>
+      </ol>
+    </section>
 
-    <section>
-      <h2>Джерела інформації</h2>
-      <ul>
-        <li><a href="https://git-scm.com/doc" target="_blank">Офіційна документація Git</a></li>
-        <li><a href="https://guides.github.com/" target="_blank">Посібники від GitHub</a></li>
-        <li><a href="https://www.atlassian.com/git/tutorials" target="_blank">Git туторіали Atlassian</a></li>
-      </ul>
-    </section>
-  </main>
+    <section>
+      <h2>10 базових команд Git</h2>
+      <ol>
+        <li><code>git init</code> – створити новий репозиторій</li>
+        <li><code>git clone URL</code> – клонувати репозиторій з GitHub</li>
+        <li><code>git status</code> – перевірити стан файлів</li>
+        <li><code>git add filename</code> – додати файл у staging</li>
+        <li><code>git commit -m "повідомлення"</code> – зафіксувати зміни</li>
+        <li><code>git log</code> – переглянути історію комітів</li>
+        <li><code>git branch</code> – показати гілки</li>
+        <li><code>git checkout branch_name</code> – переключитися на іншу гілку</li>
+        <li><code>git merge branch_name</code> – об’єднати гілки</li>
+        <li><code>git push</code> – відправити зміни на GitHub</li>
+      </ol>
+    </section>
 
-  <footer>
-    <p>© 2025 Навчальний проєкт: Git</p>
-  </footer>
+    <section>
+      <h2>Сертифікат</h2>
+      <div class="certificate">
+        <p>Приклад сертифіката з онлайн-курсу по Git:</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/512px-Git_icon.svg.png" alt="Сертифікат Git">
+      </div>
+    </section>
+
+    <section>
+      <h2>Джерела інформації</h2>
+      <ul>
+        <li><a href="https://git-scm.com/doc" target="_blank">Офіційна документація Git</a></li>
+        <li><a href="https://guides.github.com/" target="_blank">Посібники від GitHub</a></li>
+        <li><a href="https://www.atlassian.com/git/tutorials" target="_blank">Git туторіали Atlassian</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Навчальний проєкт: Git</p>
+  </footer>
 </body>
 </html>
