@@ -185,17 +185,20 @@
             BASH-скрипти дозволяють автоматизувати завдання в системі. Ось приклад простого скрипту, що імітує авторизацію:
         </p>
         <div class="bash-script">
-<pre><code><span class="comment"># Імітація авторизації в системі</span>
-<span class="keyword">echo</span> <span class="string">"Введіть логін..."</span>
-<span class="keyword">read</span> login
-<span class="keyword">echo</span> <span class="string">"Введіть пароль..."</span>
-<span class="keyword">read</span> password
-
-<span class="keyword">if</span> [[ <span class="string">"$password"</span> == <span class="string">"rsm322"</span> ]] && [[ <span class="string">"$login"</span> == <span class="string">"romchik"</span> ]]; <span class="keyword">then</span>
-    <span class="keyword">echo</span> <span class="string">"Correct! Welcome to the system"</span>
-<span class="keyword">else</span>
-    <span class="keyword">echo</span> <span class="string">"Retry later!"</span>
-<span class="keyword">fi</span></code></pre>
+<pre><code><span class="keyword">for</span>((x=0; x!=2;x++))
+<span class="keyword">do</span>
+    echo <span class="string">"enter nickname..."</span>
+    read nickname
+    echo <span class="string">"enter password..."</span>
+    read password
+    <span class="keyword">if</span> [[ <span class="string">"$password"</span> == <span class="string">"rsm322"</span> ]] && [[ <span class="string">"$nickname"</span> == <span class="string">"romchik"</span> ]]; <span class="keyword">then</span>
+        echo <span class="string">"Correct! Welcome to the system"</span>
+    <span class="keyword">else</span>
+        echo <span class="string">"Incorrect password or nickname!"</span>
+    <span class="keyword">fi</span>
+<span class="keyword">done</span>
+echo <span class="string">"Please retry later!"</span>
+</code></pre>
         </div>
     </section>
 
